@@ -2,38 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet"  href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.google.com/specimen/Manrope">
   <title>Frontend Mentor | Interactive pricing component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="container-fluid">
+   <div class="row bg-light">
+    <div class="col-12"> 
+     <div class="row m-lg-5 contents d-flex justify-content-center">
+       <div class="col-12 p-5 m-lg-3 text-center circleimg">
+         <h2>Simple, traffic-based pricing</h2>
+         <p class="textcolor">Sign-up for our 30-day trial. No credit card required. </p>
+       </div>
+       <div class="col-lg-5 m-3 p-3 mb-5 pricecont textcolor">
+         <div class="row mt-3 text-center d-flex upperbox">
+           <div class="col-lg-6 order-lg-1 order-1 text-lg-left pl-5">
+            <p class="text-uppercase heading" style="padding:14px 0px;">
+             <span id="views">10k</span> 
+             <span>Pageviews</span>
+            </p>
+           </div>
+            <div class="col-lg-6 order-lg-2 order-3">
+              <span class="price">$8.00</span>
+              <span class="month pl-1">/ month</span>
+           </div>
+           <div class="col-12 order-lg-3 order-2">
+             <input type="range" id="slider" name="pricerange" min="2" max="7" step="1" value="1" class="m-4 rangestyle">
+           </div>
+            <div class="col-12 order-4 m-4">
+             <p class="Billpara m-2">Monthly Billing
+             <label class="switch">
+                 <input type="checkbox">
+                 <span class="slider round"></span>
+             </label>
+             </p>
+             <p class="Billpara">
+                 <span>Yearly Billing</span>
+                 <span class="d-lg-inline d-none discount">25% discount</span>
+                 <span class="d-lg-none d-inline discount">-25%</span>
+             </p>
+           </div>
+         </div>
+          <div class="row mt-4">
+           <div class="col-lg-6 text-lg-left text-center">
+             <ul class="list">
+               <li>Unlimited websites</li>
+               <li>100% data ownership</li>
+               <li>Email reports</li>
+             </ul>
+           </div>
+           <div class="col-lg-6 text-center">
+              <button type="button" class="buttons mt-3">Start my trial</button> 
+           </div>
+         </div>
+       </div>
+     </div>
+    </div>
+   </div>
+    <div class="attribution">
+       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor </a>. 
+       Coded by <a href="#">Manju Kumari</a>.
+    </div>
   </div>
+   <script src="jquery-3.5.1.js"></script>
+   <script src="index.js"></script>
 </body>
 </html>
