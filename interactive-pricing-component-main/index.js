@@ -51,6 +51,15 @@ $('document').ready(function(e){
        $('input[type="checkbox"]').on('click',function(e){
             discount();
        });
+	
+	 document.querySelectorAll(".rangestyle").forEach(function(el) {       
+           el.oninput =function(){            
+           var valPercent = (el.valueAsNumber  - parseInt(el.min)) / (parseInt(el.max) - parseInt(el.min));
+           var style = 'background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop('+ valPercent+', hsl(174, 77%, 80%)), color-stop('+ valPercent+',hsl(223, 50%, 87%)));';
+           el.style = style;
+        };
+        el.oninput();
+      });
 
 });
 
