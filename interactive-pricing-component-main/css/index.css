@@ -128,8 +128,8 @@ input:checked + .slider:before {
   color:hsl(226, 100%, 87%); 
   background-color: hsl(227, 35%, 25%); 
   padding: 0.500rem 2rem;
-  outline: none;
   border-style: none;
+  outline: 0 !important;
 }
 
 .buttons:hover{
